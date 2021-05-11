@@ -50,3 +50,7 @@ Support Me
 BTC Donations Welcome: 3Fy8MVbx35zMrBnTP6rJt1Cb7fwS4NacvA
 
 Or buy me a coffee: https://ko-fi.com/aCallum
+
+-------------------------------------------------------------------------------------
+
+Modified Version with Currency changed to EUR and Language set to Italian
