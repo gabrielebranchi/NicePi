@@ -29,7 +29,7 @@ def lerp(a, b, t):
 
 def get_price():
     data = public_api.get_current_prices()
-    return data["BTCUSDC"] * config.USD_GBP
+    return data["BTCUSDC"] * config.USD_EUR
 
 # Create public api object
 public_api = nicehash.public_api(False)
@@ -84,14 +84,14 @@ previousTotalAcceptedSpeed = 0
 
 currentProfitability = 0
 previousProfitability = 0
-profitabilityGBP = 0
+profitabilityEUR = 0
 
 nextAvailablePayout = 0
 prevAvailablePayout = 0
 
 est_time_withdrawal = datetime.now()
 
-usdgbp = get_price()
+usdeur = get_price()
 
 firstRun = True
 
@@ -146,8 +146,8 @@ while True:
         est_time_withdrawal = timedelta(hours = est_time_withdrawal)
         est_time_withdrawal += datetime.now()
         
-        usdgbp = get_price()
-        profitabilityGBP = currentProfitability * usdgbp
+        usdeur = get_price()
+        profitabilityEUR = currentProfitability * usdeur
 
     if (currentBalance > previousBalance) and (previousBalance > 0):
         image = Image.open('images/bitcoins.bmp').convert(imageEncoding)
@@ -184,7 +184,7 @@ while True:
             draw.text((75, 12), "/24h", fill='white', font=font)
 
             draw.text((0, 32-8), "=£", fill='white', font=currencyFont)
-            draw.text((12, 32-6), "{:.2f}".format(profitabilityGBP), fill='white', font=font)
+            draw.text((12, 32-6), "{:.2f}".format(profitabilityEUR), fill='white', font=font)
 
             if config.SHOW_INTERPOLATED_VALUE:
                 acceptedSpeed_lbl = lerp(previousTotalAcceptedSpeed, currentTotalAceptedSpeed, delta)
@@ -206,7 +206,7 @@ while True:
 
             draw.text((0, 6), "E", fill='white', font=bitcoinfont)
             draw.text((9, 5), "{:.8f}".format(currentBalance_lbl), fill='white', font=font2)
-            draw.text((80, 5), "£{:.2f}".format(usdgbp * currentBalance_lbl), fill='white', font=font2)
+            draw.text((80, 5), "£{:.2f}".format(usdeur * currentBalance_lbl), fill='white', font=font2)
 
             draw.text((0, 32-13), "Estimated Withdrawl Date", fill='white', font=font)
             draw.text((0, 32-6), "{:%a %d %b %H:%M}".format(est_time_withdrawal), fill='white', font=font)
@@ -222,7 +222,7 @@ while True:
 
             draw.text((0, 6), "E", fill='white', font=bitcoinfont)
             draw.text((9, 5), "{:.8f}".format(unpaidBalance_lbl), fill='white', font=font2)
-            draw.text((80, 5), "£{:.2f}".format(usdgbp * unpaidBalance_lbl), fill='white', font=font2)
+            draw.text((80, 5), "£{:.2f}".format(usdeur * unpaidBalance_lbl), fill='white', font=font2)
 
             draw.text((0, 32-13), "Next Payout Date", fill='white', font=font)
             draw.text((0, 32-6), "{0}".format(nextAvailablePayout), fill='white', font=font)
