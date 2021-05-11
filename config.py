@@ -7,7 +7,7 @@ RUN_EMULATOR = False
 SHOW_INTERPOLATED_VALUE = True
 
 # used to convert from dollars to pounds, set to 1 for displaying USD
-USD_GBP = 0.72184992
+USD_EUR = 0.82237184
 
 # For testing purposes use api-test.nicehash.com. Register here: https://test.nicehash.com
 # HOST = 'https://api-test.nicehash.com'
