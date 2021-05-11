@@ -173,17 +173,17 @@ while True:
                 displayToShow = 0
 
         if displayToShow == -1:
-            draw.text((0, -1), "Error Receiving Data", fill='white', font=font)
+            draw.text((0, -1), "Errore Ricezione Dati", fill='white', font=font)
             draw.text((0, 32-6), "{0}".format(error), fill='white', font=font)
 
         if displayToShow == 0:
         
-            draw.text((0, -1), "Current Profitability", fill='white', font=font)
+            draw.text((0, -1), "Redditività Attuale", fill='white', font=font)
             draw.text((0, 6), "E", fill='white', font=bitcoinfont)
             draw.text((9, 5), "{:.8f}".format(currentProfitability), fill='white', font=font2)
             draw.text((75, 12), "/24h", fill='white', font=font)
 
-            draw.text((0, 32-8), "=£", fill='white', font=currencyFont)
+            draw.text((0, 32-8), "=€", fill='white', font=currencyFont)
             draw.text((12, 32-6), "{:.2f}".format(profitabilityEUR), fill='white', font=font)
 
             if config.SHOW_INTERPOLATED_VALUE:
@@ -195,7 +195,7 @@ while True:
         
         if displayToShow == 1:      
             
-            draw.text((0, -1), "Current Balance", fill='white', font=font)            
+            draw.text((0, -1), "Bilancio Corrente", fill='white', font=font)            
 
             # I show the TOTAL BALANCE HERE, so current balance + unpaid mining balance!
 
@@ -206,14 +206,14 @@ while True:
 
             draw.text((0, 6), "E", fill='white', font=bitcoinfont)
             draw.text((9, 5), "{:.8f}".format(currentBalance_lbl), fill='white', font=font2)
-            draw.text((80, 5), "£{:.2f}".format(usdeur * currentBalance_lbl), fill='white', font=font2)
+            draw.text((80, 5), "€{:.2f}".format(usdeur * currentBalance_lbl), fill='white', font=font2)
 
-            draw.text((0, 32-13), "Estimated Withdrawl Date", fill='white', font=font)
+            draw.text((0, 32-13), "Data di Ritiro Stimata", fill='white', font=font)
             draw.text((0, 32-6), "{:%a %d %b %H:%M}".format(est_time_withdrawal), fill='white', font=font)
 
         if displayToShow == 2:
 
-            draw.text((0, -1), "Unpaid Mining Balance", fill='white', font=font)
+            draw.text((0, -1), "Bilancio Mining non Pagato", fill='white', font=font)
 
             if config.SHOW_INTERPOLATED_VALUE:
                 unpaidBalance_lbl = lerp(previousUnpaidBalance, currentUnpaidBalance, delta)
@@ -222,9 +222,9 @@ while True:
 
             draw.text((0, 6), "E", fill='white', font=bitcoinfont)
             draw.text((9, 5), "{:.8f}".format(unpaidBalance_lbl), fill='white', font=font2)
-            draw.text((80, 5), "£{:.2f}".format(usdeur * unpaidBalance_lbl), fill='white', font=font2)
+            draw.text((80, 5), "€{:.2f}".format(usdeur * unpaidBalance_lbl), fill='white', font=font2)
 
-            draw.text((0, 32-13), "Next Payout Date", fill='white', font=font)
+            draw.text((0, 32-13), "Prossima Data Pagamento", fill='white', font=font)
             draw.text((0, 32-6), "{0}".format(nextAvailablePayout), fill='white', font=font)
 
         # Experimental display Graph of MH/s over time
@@ -236,7 +236,7 @@ while True:
 
         #     speedData.append(lerp(previousTotalAcceptedSpeed, currentTotalAceptedSpeed, delta))
 
-        #     draw.text((0, -1), "Accepted Speed History", fill='white', font=font)
+        #     draw.text((0, -1), "Cronologia Velocità Accettata", fill='white', font=font)
         #     line_points = [(0, 0)] * 15
 
         #     print(speedData)
