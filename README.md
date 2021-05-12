@@ -34,7 +34,7 @@ Software & Install:
     - sudo pip3 install spidev
     - sudo apt-get install git
 4. clone this project to RaspberryPi
-    - git clone https://github.com/aCallum/NicePi
+    - git clone https://github.com/gabrielebranchi/NicePi
 5. Edit config.py in nano or other text editor and add your keys from nicehash API
     - nano NicePi/config.py
     - or open with text editor
@@ -54,3 +54,5 @@ Or buy me a coffee: https://ko-fi.com/aCallum
 -------------------------------------------------------------------------------------
 
 Modified Version with Currency changed to EUR and Language set to Italian
+
+Full credits for the creation of the project are on aCallum, his original repositoryc: https://github.com/aCallum/NicePi
