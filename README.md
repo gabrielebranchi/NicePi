@@ -55,4 +55,4 @@ Or buy me a coffee: https://ko-fi.com/aCallum
 
 Modified Version with Currency changed to EUR and Language set to Italian
 
-Full credits for the creation of the project are on aCallum, his original repositoryc: https://github.com/aCallum/NicePi
+Full credits for the creation of the project are on aCallum, his original repository: https://github.com/aCallum/NicePi
