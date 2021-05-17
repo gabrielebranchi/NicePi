@@ -9,6 +9,8 @@ SHOW_INTERPOLATED_VALUE = True
 # used to convert from dollars to pounds, set to 1 for displaying USD
 USD_EUR = 0.82237184
 
+WITHDRAWL_TARGET = 0.0025
+
 # For testing purposes use api-test.nicehash.com. Register here: https://test.nicehash.com
 # HOST = 'https://api-test.nicehash.com'
 # ORGANISATION_ID = ''
