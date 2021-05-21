@@ -70,10 +70,10 @@ speedData = []
 frameSize = (128, 32)
 timeCheck = time.time()
 
-font = ImageFont.truetype("fonts/04B_03__.TTF", 8)
-font2 = ImageFont.truetype("fonts/Nunito-ExtraLight.ttf", 12)
-currencyFont = ImageFont.truetype("fonts/lilliput steps.ttf", 8)
-bitcoinfont = ImageFont.truetype("fonts/bitcoin.ttf", 14)
+font = ImageFont.truetype("/home/pi/NicePi/fonts/04B_03__.TTF", 8)
+font2 = ImageFont.truetype("/home/pi/NicePi/fonts/Nunito-ExtraLight.ttf", 12)
+currencyFont = ImageFont.truetype("/home/pi/NicePi/fonts/lilliput steps.ttf", 8)
+bitcoinfont = ImageFont.truetype("/home/pi/NicePi/fonts/bitcoin.ttf", 14)
 
 screen_x_offset = frameSize[0]
 
