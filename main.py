@@ -1,17 +1,20 @@
 import config
 
 import time
+import locale
 import numpy as np
 from datetime import datetime, timedelta
 from time import mktime
 
 import nicehash
 
+locale.setlocale(locale.LC_ALL, "it_IT.utf8")
+
 if config.RUN_EMULATOR:
     import cv2
 else:
     import sys
-    sys.path.append('./drivers')
+    sys.path.append('/home/pi/NicePi/drivers')
     import SPI
     import SSD1305
 
