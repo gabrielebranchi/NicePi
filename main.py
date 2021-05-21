@@ -193,7 +193,7 @@ while True:
 
         if displayToShow == 0:
         
-            draw.text((0, -1), "Redditività Attuale", fill='white', font=font)
+            draw.text((0, -1), "Redditivita Attuale", fill='white', font=font)
             draw.text((0, 6), "E", fill='white', font=bitcoinfont)
             draw.text((9, 5), "{:.8f}".format(currentProfitability), fill='white', font=font2)
             draw.text((75, 12), "/24h", fill='white', font=font)
