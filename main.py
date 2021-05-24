@@ -223,7 +223,7 @@ while True:
             draw.text((9, 5), "{:.8f}".format(currentBalance_lbl), fill='white', font=font2)
             draw.text((80, 5), "€{:.2f}".format(usdeur * currentBalance_lbl), fill='white', font=font2)
 
-            draw.text((0, 32-13), "Data Ritiro Stimata BTC>0.002", fill='white', font=font)
+            draw.text((0, 32-13), "Data Ritiro Stimata BTC>0.001", fill='white', font=font)
             draw.text((0, 32-6), "{:%a %d %b %H:%M}".format(est_time_withdrawal), fill='white', font=font)
 
         if displayToShow == 2:
